@@ -182,19 +182,6 @@ http://localhost:8080/swagger-ui.html
 
 ---
 
-## 🐳 Docker (Optional)
-Dockerfile:
-FROM eclipse-temurin:17-jdk-jammy  
-ARG JAR_FILE=target/*.jar  
-COPY ${JAR_FILE} app.jar  
-ENTRYPOINT ["java","-jar","/app.jar"]
-
-Build & Run:
-docker build -t hotwheels-backend .  
-docker run -p 8080:8080 hotwheels-backend
-
----
-
 ## 👨‍💻 Default Credentials
 Username: admin  
 Password: password  
