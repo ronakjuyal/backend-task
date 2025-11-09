@@ -121,6 +121,7 @@ Vehicle Example
 
 ### 💳 Payment Simulation
 POST /api/payment/initiate — Initiate payment (auto success after 5s) —  ✅
+
 GET /api/payment/{id} — Get payment status by ID — ✅
 
 Initiate Request
