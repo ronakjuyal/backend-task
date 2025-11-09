@@ -27,9 +27,9 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeHttpRequests()
-                // allow auth endpoints, swagger and the public payment initiation
-                .requestMatchers("/swagger-ui/**", "/v3/api-docs/**", "/api/auth/**", "/api/payment/initiate", "/actuator/**").permitAll()
-                // require authentication for other /api/** endpoints
+                // allow only auth and swagger endpoints publicly
+                .requestMatchers("/swagger-ui/**", "/v3/api-docs/**", "/api/auth/**", "/actuator/**").permitAll()
+                // all other /api/** endpoints require JWT token
                 .requestMatchers("/api/**").authenticated()
                 .anyRequest().permitAll()
                 .and()
@@ -45,7 +45,6 @@ public class SecurityConfig {
 
     @Bean
     public UserDetailsService userDetailsService(PasswordEncoder passwordEncoder) {
-        // Simple in-memory user for demonstration. Replace with real user store in production.
         var user = User.withUsername("admin")
                 .password(passwordEncoder.encode("password"))
                 .roles("ADMIN")
