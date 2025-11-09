@@ -193,11 +193,16 @@ Role: ADMIN
 ## 🧾 Project Demo images 
 ![Swagger UI Screenshot](images/img1.png)
 ![Swagger UI Screenshot](images/img2.png)
+###📝copy and paset JWT token
 ![Swagger UI Screenshot](images/img9.png)
+### add new dealers and vehicle
 ![Swagger UI Screenshot](images/img3.png)
 ![Swagger UI Screenshot](images/img4.png)
+### list all vehicle of PREMIUM dealers 
 ![Swagger UI Screenshot](images/img5.png)
+### initiate payment
 ![Swagger UI Screenshot](images/img6.png)
+## check payment status affter 5 sec
 ![Swagger UI Screenshot](images/img7.png)
 
 
