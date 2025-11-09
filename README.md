@@ -1,69 +1,42 @@
 # 🏎️ HotWheels Backend Task — Dealer & Vehicle Management API
-},
-"message": "Vehicle created successfully",
-"timestamp": 1699999999999
-}
-```
 
-
-**Error**
-```json
-{
-"success": false,
-"data": null,
-"message": "Dealer not found",
-"timestamp": 1699999999999
-}
-```
-
+## 📘 Overview
+This project is a **Spring Boot 3** REST API backend that manages **Dealers**, **Vehicles**, and **Subscription Payments** with simulated payment processing and **JWT-based authentication**.  
+It includes Swagger UI for testing, a 5-second simulated payment callback, and standardized JSON responses.
 
 ---
 
-
-## 🧪 Testing
-You can use:
-- **Swagger UI** for live testing
-- **Postman** (import endpoints manually)
-- Or `curl`:
-```bash
-curl -X POST http://localhost:8080/api/dealers \
--H "Content-Type: application/json" \
--H "Authorization: Bearer <token>" \
--d '{"name":"SuperCars","email":"scars@test.com","subscriptionType":"PREMIUM"}'
-```
-
+## ⚙️ Tech Stack
+| Layer | Technology |
+|--------|-------------|
+| **Backend Framework** | Spring Boot 3 |
+| **Database** | PostgreSQL (JPA/Hibernate) |
+| **Authentication** | JWT (JSON Web Token) |
+| **Documentation** | Swagger / OpenAPI 3 |
+| **Mapping** | MapStruct |
+| **Build Tool** | Maven |
+| **Language** | Java 17 |
 
 ---
 
-
-## 🧱 Build for production
-```bash
-mvn clean package -DskipTests
-java -jar target/backendtask-0.0.1-SNAPSHOT.jar
-```
-
-
----
-
-
-## 🐳 Docker (Optional)
-```bash
-docker build -t hotwheels-backend .
-docker run -p 8080:8080 hotwheels-backend
-```
-
+## 🧱 Features
+- Dealer Management (CRUD)
+- Vehicle Management (CRUD + Premium Dealer Filter)
+- Payment Simulation (auto updates after 5 seconds)
+- JWT Authentication & Authorization
+- Centralized API Response Wrapper
+- Integrated Swagger UI
+- PostgreSQL persistence
 
 ---
 
+## 🚀 Setup Instructions
 
-## 👨‍💻 Default Credentials
-| Username | Password | Role |
-|-----------|-----------|------|
-| admin | password | ADMIN |
+### 1️⃣ Prerequisites
+- Java 17+
+- Maven 3.8+
+- PostgreSQL running locally (default port `5432`)
 
-
----
-
-
-## 📄 License
-This project is for demonstration and educational purposes.
+### 2️⃣ Create Database
+```sql
+CREATE DATABASE hotwheels_db;
